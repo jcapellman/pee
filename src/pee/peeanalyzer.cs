@@ -19,7 +19,7 @@ namespace pee
         public void Analyze()
         {
             var text = File.ReadAllText(_fileName, Encoding.ASCII);
-            var matches = Regex.Matches(text, @"([a-zA-Z])");
+            var matches = Regex.Matches(text, @"\w{2,}");
 
             foreach (var match in matches)
             {
